@@ -15,10 +15,12 @@ Section for Cognitive Systems.
 The toolbox was developed in connection with the Brain Connectivity project 
 at DTU (https://brainconnectivity.compute.dtu.dk/) .
 
-Algorithms:
+## Algorithms:
 
-psFA: Probabilistic Sparse Factor Analysis (psFA). Models subject specific heteroscedastic feature/voxel noise.
-psPCA: Probabilistic Sparse Principal Component Analysis (psPCA). Models subject specific homoscedastic noise.
+* psFA
+	- Probabilistic Sparse Factor Analysis (psFA). Models subject specific heteroscedastic feature/voxel noise.
+* psPCA
+	- Probabilistic Sparse Principal Component Analysis (psPCA). Models subject specific homoscedastic noise.
 
 Common algorithm properties
 
@@ -29,6 +31,8 @@ Common algorithm properties
 * Estimating number of components using Automatic Relevance Determination (ARD).
 * Ability to individually turn off modeling aspects such as sparsity, ARD and noise modeling.
 
-Demonstrators:
-demo_psFA:      Demostration on a toy example showing model settings and their effect
-calcICASSP17:   Synthetic experiments in the original psFA article (not yet published)
+## Demonstrators:
+* demo_psFA
+	- Demostration on a toy example showing model settings and their effect
+* calcICASSP17
+	- Synthetic experiments in the original psFA article (which is currently under review).
