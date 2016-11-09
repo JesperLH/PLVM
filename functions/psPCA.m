@@ -234,8 +234,8 @@ while lbnorm > conv_crit && iter < maxiter...
         || (model_gamma && iter <= iter_gamma_fixed)
     iter = iter + 1;
     
-    %% Update Z
-    EAtA = symmetrizing(EA'*EA,db_flag)+sum(Sigma_A,3); %<W^T W>
+    %% Update S
+    EAtA = symmetrizing(EA'*EA,db_flag)+sum(Sigma_A,3); %<A^T A>
     Sigma_S = my_pagefun(@inv,my_pagefun(@plus,bsxfun(@times,EAtA,Etau),diag(Egamma)) );
     Sigma_S = (Sigma_S+permute(Sigma_S,[2,1,3]))/2;
 
@@ -248,7 +248,7 @@ while lbnorm > conv_crit && iter < maxiter...
         Emu = bsxfun(@times,Etau,Sigma_mu).*(sum(X,2) - sum(my_pagefun(@mtimes, EA, ES),2));
     end
     
-    %% Update W
+    %% Update A
     ESStau = sum(my_pagefun(@times,ESSt,Etau),3);
     Sigma_A = my_pagefun(@plus,bsxfun(@times,ESStau,reshape(1./Ealpha',1,D,V)),Iq);
     Sigma_A = my_pagefun(@inv,Sigma_A);
@@ -279,7 +279,7 @@ while lbnorm > conv_crit && iter < maxiter...
     end
     %Reconstruction error (sum of squared error)
     err_sse = sum(sum(X.^2))+T*(sum(Sigma_mu)+sum(Emu.^2))... 
-        + sum(sum(my_pagefun(@times, EAtA, ESSt),1),2)... %Trace(WtW * zt ztT)
+        + sum(sum(my_pagefun(@times, EAtA, ESSt),1),2)... %Trace(<A^T A> * <St St^T>)
     	+ 2*my_pagefun(@mtimes,permute(Emu,[2,1,3]),my_pagefun(@mtimes,EA,sum(ES,2))-sum(X,2))... % 
     	- 2 * sum(sum(my_pagefun(@times, EA', my_pagefun(@mtimes, ES, permute(X,[2,1,3]))),1),2);
     
