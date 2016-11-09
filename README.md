@@ -1,4 +1,4 @@
-# PALMS - ProbAbilistic Latent variable Modeling toolbox for multiSubject data
+# PLVM - Probabilistic Latent Variable Modeling toolbox for multisubject data
 The Probabilistic Latent Variable Modeling Toolbox for Multisubject Data 
 holds a collection of latent variable algorithms implemented in Matlab™. 
 The algorithms support the use of graphical processing units (GPUs) for 
