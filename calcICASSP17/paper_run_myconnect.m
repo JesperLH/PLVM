@@ -1,7 +1,9 @@
 %% Run Myconnectome (Russel Poldrack)
-% For a full description see [1]
+% For a full description of the preprocessing see [1], also not  
+% visualizing the results were done using VITLAB toolbox 
+% (avaliable at https://github.com/JesperLH/VITLAM).
 %
-% The resting-state data comes from [1] availabe at
+% The resting-state data comes from [2] availabe at
 % https://openfmri.org/dataset/ds000031/, then pre-processed using SPM12
 % (Statistical Parametric Mapping) availabe at
 % http://www.fil.ion.ucl.ac.uk/spm/software/spm12/ .
@@ -19,12 +21,10 @@
 %   only considered the 25 first sessions of the data. 
 %
 %% References
-% [1] Jesper L. Hinrich, S¯ren F.V. Nielsen, Nicolai A. B. Riis, Casper T.
-%     Eriksen, Jacob Fr¯sig, Marco D. F. Kristensen, Mikkel N. Schmidt,
-%     Kristoffer Hougaard Madsen, and Morten M¯rup, ìScalable group level
-%     probabilistic sparse factor analysis,î in 2017 IEEE International
-%     Conference on Acoustics, Speech, and Signal Processing, ICASSPí17 (in
-%     review). 2017, IEEE.
+% [1] Jesper L. Hinrich, S√∏ren F.V. Nielsen, Nicolai A. B. Riis, Casper T.
+%     Eriksen, Jacob Fr√∏sig, Marco D. F. Kristensen, Mikkel N. Schmidt,
+%     Kristoffer Hougaard Madsen, and Morten M√∏rup, ‚ÄúScalable group level
+%     probabilistic sparse factor analysis,‚Äù (in review).
 % [2] Poldrack, R. A. et al. Long-term neural and physiological phenotyping
 %     of a single human. Nature communications, 6:8885, 9 December 2015.
 
