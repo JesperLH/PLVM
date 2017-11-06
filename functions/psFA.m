@@ -86,22 +86,22 @@
 %   'elbo':         The evidence lowerbound at each iteration.
 %
 %% References
-% *NOTE* The article introducing this model and its application to
-% functional magnetic resonance imaging is currently under review. If you
-% have any questions contact the e-mail listed below.
+% The article introducing this model and its application to functional
+% magnetic resonance imaging is [1]. 
 %
-% [1] Hinrich, J. L. et al. “Scalable Group Level Probabilistic Sparse 
-%     Factor Analysis,” in 2017 IEEE International Conference on Acoustics, 
-%     Speech, and Signal Processing, ICASSP’17 (IN REVIEW). 2017, IEEE.
+% [1] Hinrich, J. L. et al. Scalable Group Level Probabilistic Sparse 
+%     Factor Analysis, in 2017 IEEE International Conference on Acoustics, 
+%     Speech, and Signal Processing, ICASSP17.
 %
-% Copyright (C) 2016 Technical University of Denmark - All Rights Reserved
-% You may use, distribute and modify this code under the
-% terms of the Probabilistic Latent Variable Modeling Toolbox for Multisubject Data license.
+% If you have any questions contact us on github or the e-mail listed below. 
 % 
 % You should have received a copy of the license with this file. If not,
 % please write to: jesper dot hinrich at gmail dot com, or visit : 
 % https://brainconnectivity.compute.dtu.dk/ (under software)
-
+%
+% Copyright (C) 2016 Technical University of Denmark - All Rights Reserved
+% You may use, distribute and modify this code under the
+% terms of the Probabilistic Latent Variable Modeling Toolbox for Multisubject Data license.
 
 function [first_moments,other_moments,priors,elbo] = psFA(X,D,varargin)
 fprintf('Initializing Group Sparse FA...\n'); tic;
